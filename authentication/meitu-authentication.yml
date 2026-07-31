@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: searched
+source: https://ai.meitu.com/doc/?id=92&type=api
+docs: https://ai.meitu.com/doc/?id=92&type=api
+description: >-
+  Authentication profile for the Meitu AI Open Platform (OpenAPI). Meitu issues
+  an access key / secret key pair per application from the platform console.
+  Requests are authenticated with an HMAC signature computed from the secret
+  key (the platform documents signing helpers in C#, Go, Java, Python,
+  JavaScript and PHP). Legacy MTlab synchronous endpoints accept the credential
+  pair as api_key / api_secret query parameters.
+summary:
+  types:
+    - apiKey
+    - custom-signature
+schemes:
+  - name: openapiSignature
+    type: signature
+    style: access-key/secret-key HMAC signature
+    credential_env:
+      - MEITU_OPENAPI_ACCESS_KEY
+      - MEITU_OPENAPI_SECRET_KEY
+    description: >-
+      Per-application access key + secret key. The secret key signs each request
+      (signature helpers published per language). Verified via
+      /demo/authorization on the OpenAPI gateway.
+    source: https://ai.meitu.com/doc/?id=92&type=api
+  - name: mtlabApiKey
+    type: apiKey
+    in: query
+    param_names:
+      - api_key
+      - api_secret
+    description: >-
+      Legacy MTlab synchronous vision endpoints (e.g.
+      /v1/AIDenoise, /v1/photo_scissors/sod) accept the credential pair as query
+      parameters over HTTPS.
+    source: https://ai.meitu.com/doc/?id=92&type=api
+notes:
+  - HTTPS/TLS required for all requests.
+  - Free trial credentials are rate-limited to 1 QPS / 1000 calls.

@@ -1,0 +1,58 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/meitu/meitu-cli
+description: >-
+  The Meitu CLI command surface — the official Node.js developer tool over the
+  Meitu AI Open Platform (OpenAPI). Captured verbatim from the meitu/meitu-cli
+  README and npm package. The binary itself is catalogued in
+  packages/meitu-packages.yml; this artifact enumerates its command surface
+  (auth/config, image tools, video tools, low-level task submission, task
+  polling).
+docs: https://ai.meitu.com/doc/?id=92&type=api
+repo: https://github.com/meitu/meitu-cli
+npm: https://www.npmjs.com/package/meitu-cli
+install:
+  npm: npm install -g meitu-cli
+  npx: npx -y meitu-cli
+auth:
+  style: access-key/secret-key signature
+  env:
+    - MEITU_OPENAPI_ACCESS_KEY
+    - MEITU_OPENAPI_SECRET_KEY
+  base_url_env:
+    - MEITU_OPENAPI_BASE_URL
+    - MEITU_OPENAPI_IMAGE_BASE_URL
+    - MEITU_OPENAPI_STRATEGY_BASE_URL
+commands:
+  auth_config:
+    - {name: auth verify, description: Verify configured access/secret key against the OpenAPI gateway (/demo/authorization).}
+    - {name: config set-ak, description: Persist the OpenAPI access key.}
+    - {name: config set-sk, description: Persist the OpenAPI secret key.}
+  image_tools:
+    - {name: image-generate, description: Generate images from text/image prompts.}
+    - {name: image-poster-generate, description: Generate poster/layout images.}
+    - {name: image-edit, description: Edit an image via instruction.}
+    - {name: image-upscale, description: Upscale / enhance image resolution.}
+    - {name: image-beauty-enhance, description: Portrait beautification and skin enhancement.}
+    - {name: image-face-swap, description: Swap a face into a target image.}
+    - {name: image-try-on, description: Virtual clothing try-on.}
+    - {name: image-cutout, description: Intelligent subject cutout / background removal.}
+    - {name: image-grid-split, description: Split an image grid into cells.}
+  video_tools:
+    - {name: video-motion-transfer, description: Transfer motion onto a source subject.}
+    - {name: image-to-video, description: Animate a still image into a video.}
+    - {name: text-to-video, description: Generate video from a text prompt.}
+    - {name: video-to-gif, description: Convert a video into a GIF.}
+  advanced:
+    - {name: generate, description: Low-level custom task submission for any OpenAPI capability (/api/v1/sdk/push).}
+    - {name: task wait, description: Poll an async task to completion (/api/v1/sdk/status).}
+key_flows:
+  - name: async task lifecycle
+    steps:
+      - Submit a task with a tool command or `generate` (POST /api/v1/sdk/push).
+      - Receive a task id.
+      - Poll `task wait` (GET /api/v1/sdk/status) until the task completes.
+      - Retrieve the result asset URL.
+  - name: structured output for agents
+    steps:
+      - Most commands support structured JSON output for agent/batch workflows.

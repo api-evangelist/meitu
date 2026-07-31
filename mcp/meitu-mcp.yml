@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: derived
+source: cli/meitu-cli.yml, https://ai.meitu.com/doc/?id=92&type=api
+status: candidate
+description: >-
+  CANDIDATE MCP tool surface derived from the official meitu-cli command set and
+  the Meitu AI Open Platform capabilities. No official hosted/remote Meitu MCP
+  server was found at enrichment time; this is a proposed mapping of OpenAPI
+  operations to MCP tools, not a published server.
+server:
+  official: false
+  hosted_url: none-found
+transport: proposed stdio (wrap meitu-cli / Meitu OpenAPI)
+auth: MEITU_OPENAPI_ACCESS_KEY + MEITU_OPENAPI_SECRET_KEY (see authentication/meitu-authentication.yml)
+tools:
+  - {name: image_generate, maps_to: "meitu-cli image-generate", description: Generate images from text/image prompts.}
+  - {name: image_edit, maps_to: "meitu-cli image-edit", description: Edit an image via instruction.}
+  - {name: image_upscale, maps_to: "meitu-cli image-upscale", description: Upscale / enhance image resolution.}
+  - {name: image_beauty_enhance, maps_to: "meitu-cli image-beauty-enhance", description: Portrait beautification.}
+  - {name: image_cutout, maps_to: "meitu-cli image-cutout", description: Intelligent subject cutout / background removal.}
+  - {name: image_face_swap, maps_to: "meitu-cli image-face-swap", description: Face swap into a target image.}
+  - {name: image_try_on, maps_to: "meitu-cli image-try-on", description: Virtual clothing try-on.}
+  - {name: image_poster_generate, maps_to: "meitu-cli image-poster-generate", description: Generate poster/layout images.}
+  - {name: text_to_video, maps_to: "meitu-cli text-to-video", description: Generate video from text.}
+  - {name: image_to_video, maps_to: "meitu-cli image-to-video", description: Animate a still image into video.}
+  - {name: video_motion_transfer, maps_to: "meitu-cli video-motion-transfer", description: Transfer motion onto a subject.}
+  - {name: video_to_gif, maps_to: "meitu-cli video-to-gif", description: Convert video to GIF.}
+  - {name: task_status, maps_to: "meitu-cli task wait", description: Poll an async task (GET /api/v1/sdk/status) to completion.}

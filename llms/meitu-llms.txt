@@ -1,0 +1,29 @@
+# Meitu AI Open Platform
+
+> Meitu (美图) is a Chinese visual-technology company whose AI Open Platform
+> exposes 100+ image and video AI capabilities as a Web API (OpenAPI) plus
+> mobile/native SDKs — image generation and editing, portrait beautification,
+> face and body analysis, cutout/segmentation, virtual try-on, and image/text
+> to video. Access uses a per-application access key + secret key signature.
+
+## Docs
+- API documentation: https://ai.meitu.com/doc/?id=92&type=api
+- Open platform: https://ai.meitu.com/
+- Company API portal: https://api.meitu.com/
+
+## API
+- Auth: access key + secret key HMAC signature (MEITU_OPENAPI_ACCESS_KEY / MEITU_OPENAPI_SECRET_KEY); legacy MTlab endpoints take api_key/api_secret query params. See authentication/meitu-authentication.yml
+- Async model: submit POST /api/v1/sdk/push -> poll GET /api/v1/sdk/status. See conventions/meitu-conventions.yml
+- Versioning: URI path v1. Trial tier: 1 QPS / 1000 calls. See lifecycle/meitu-lifecycle.yml
+
+## Tooling
+- CLI: meitu-cli (official Node.js CLI) — https://github.com/meitu/meitu-cli — npm install -g meitu-cli. See cli/meitu-cli.yml and packages/meitu-packages.yml
+- Candidate MCP tool mapping: mcp/meitu-mcp.yml
+
+## Capabilities
+- Image generation: text-to-image, image-to-image, poster generation, style transfer
+- Image processing: upscale, denoise, enhance, cutout / background removal, object removal
+- Portrait: beautification, skin enhancement, makeup, face swap
+- Face & body: attribute analysis, keypoint detection, segmentation
+- Video: text-to-video, image-to-video, motion transfer, video-to-gif
+- Virtual try-on for e-commerce

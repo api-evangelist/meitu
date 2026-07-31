@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source: https://registry.npmjs.org/meitu-cli
+description: >-
+  First-party Meitu client tooling for the Meitu AI Open Platform (OpenAPI).
+  Confirmed against the public npm registry (registry.npmjs.org) and the
+  official meitu/meitu-cli GitHub repository. Meitu also documents native SDKs
+  (Java, Python, PHP, Node.js, C#, Go) for signature generation on
+  ai.meitu.com, but those are distributed from the platform console rather than
+  a public package registry, so only the registry-confirmed package is listed
+  as official here.
+packages:
+  - language: javascript
+    registry: npm
+    name: meitu-cli
+    url: https://www.npmjs.com/package/meitu-cli
+    source: https://github.com/meitu/meitu-cli
+    install: npm install -g meitu-cli
+    version: 2.1.10
+    license: MIT
+    author: Meitu
+    official: true
+    note: >-
+      Node.js CLI for Meitu OpenAPI image and media tasks (cutout, beauty
+      enhance, image/text/video generation, try-on, face swap). Also runnable
+      via `npx -y meitu-cli`. Command surface catalogued in cli/meitu-cli.yml.

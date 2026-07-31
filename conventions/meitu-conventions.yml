@@ -1,0 +1,42 @@
+generated: '2026-07-20'
+method: searched
+source: https://ai.meitu.com/doc/?id=92&type=api, https://github.com/meitu/meitu-cli
+description: >-
+  Cross-cutting runtime conventions for the Meitu AI Open Platform (OpenAPI),
+  derived from the platform docs and the official meitu-cli. Meitu exposes two
+  generations of surface: an async task-based OpenAPI gateway (submit → poll)
+  and legacy MTlab synchronous vision endpoints.
+auth:
+  style: access-key/secret-key HMAC signature (see authentication/meitu-authentication.yml)
+  transport: HTTPS only
+async_tasks:
+  model: submit-then-poll
+  submit: POST /api/v1/sdk/push
+  status: GET /api/v1/sdk/status
+  cli: "meitu-cli generate  +  meitu-cli task wait"
+  description: >-
+    Long-running generation/media tasks return a task id from the push
+    endpoint; clients poll the status endpoint (or `task wait`) until the task
+    completes and an asset URL is returned.
+file_upload:
+  strategy_service: /ai/token_policy
+  base_url_env: MEITU_OPENAPI_STRATEGY_BASE_URL
+  description: >-
+    Large input assets are uploaded via a token-policy strategy service before
+    task submission; local files and remote URLs are both supported.
+versioning:
+  style: URI path version
+  current: v1
+rate_limiting:
+  signal: QPS-based plan limits; trial tier is 1 QPS / 1000 calls
+  description: >-
+    Concurrency (QPS) and call volume are governed by the purchased plan; see
+    lifecycle/meitu-lifecycle.yml.
+output:
+  formats: [image, video, gif]
+  structured: >-
+    meitu-cli emits structured JSON output for agent/batch workflows.
+cross_links:
+  authentication: authentication/meitu-authentication.yml
+  lifecycle: lifecycle/meitu-lifecycle.yml
+  cli: cli/meitu-cli.yml

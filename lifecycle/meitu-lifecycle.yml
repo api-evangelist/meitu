@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: searched
+source: https://ai.meitu.com/doc/?id=92&type=api
+description: >-
+  Lifecycle, versioning and access posture for the Meitu AI Open Platform
+  (OpenAPI), as documented on ai.meitu.com. No dated public changelog or
+  RFC 8594 Deprecation/Sunset header policy was found at enrichment time.
+versioning:
+  scheme: URI path version
+  current: v1
+access_tiers:
+  - name: trial
+    quota: 1000 free calls
+    qps: 1
+  - name: paid
+    model: plans by call volume and QPS/concurrency
+deployment:
+  - shared cloud OpenAPI
+  - private deployment offered for high-security/enterprise customers
+status_page: none-found
+deprecation_policy: none-found
+sla: none-published
