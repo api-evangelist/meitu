@@ -37,6 +37,14 @@ tags:
 - Company
 - Artificial Intelligence
 - Image Processing
+- Computer-Vision
+- Video
+- Generative AI
+- Photo Editing
+tags_raw:
+- Company
+- Artificial Intelligence
+- Image Processing
 - Computer Vision
 - Video
 - Generative AI
@@ -56,6 +64,11 @@ apis:
   humanURL: https://ai.meitu.com/doc/?id=92&type=api
   baseURL: https://open.mtlab.meitu.com
   tags:
+  - Artificial Intelligence
+  - Image Processing
+  - Computer-Vision
+  - Video
+  tags_raw:
   - Artificial Intelligence
   - Image Processing
   - Computer Vision
