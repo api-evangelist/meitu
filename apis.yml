@@ -49,7 +49,7 @@ tags:
 - Company
 - Artificial Intelligence
 - Image Processing
-- Computer-Vision
+- Computer Vision
 - Video
 - Generative AI
 - Photo Editing
@@ -61,6 +61,7 @@ tags_raw:
 - Video
 - Generative AI
 - Photo Editing
+- Computer-Vision
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -78,13 +79,14 @@ apis:
   tags:
   - Artificial Intelligence
   - Image Processing
-  - Computer-Vision
+  - Computer Vision
   - Video
   tags_raw:
   - Artificial Intelligence
   - Image Processing
   - Computer Vision
   - Video
+  - Computer-Vision
   properties:
   - type: Documentation
     url: https://ai.meitu.com/doc/?id=92&type=api
