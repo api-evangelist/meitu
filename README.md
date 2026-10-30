@@ -1,4 +1,4 @@
-# meitu
+# Meitu
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,93 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-meitu is a company surfaced as a portfolio company of qiming and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Meitu (美图) is a Chinese visual-technology company best known for its photo- and video-editing apps (Meitu, BeautyCam, Meitu Xiuxiu). It operates the Meitu AI Open Platform, which exposes 100+ image and video AI capabilities as a Web API (OpenAPI) plus native/mobile SDKs — image generation and editing, portrait beautification, face and body analysis, cutout and segmentation, virtual try-on, and image/text-to-video. Access uses a per-application access key and secret key signature; an official Node.js CLI (meitu-cli) wraps the OpenAPI. Surfaced as a portfolio company of Qiming and enriched by the API Evangelist pipeline.
 
-Backed by: qiming — https://meitu.com
+**Areas:** Company · Artificial Intelligence · Image Processing · Computer Vision · Video · Generative AI · Photo Editing
+
+## Meitu on APIs.io
+
+Everything profiled for Meitu is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/meitu/](https://apis.io/providers/meitu/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Meitu AI Open Platform](https://apis.io/apis/meitu/meitu-ai-open-platform/) — Web API (OpenAPI) exposing 100+ Meitu AI vision capabilities — image generation/editing, portrait beautification, face/body analysis, cutout, virtual…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [meitu-mcp.yml](https://apis.io/servers/meitu/meitu-mcp-yml/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Meitu Authentication](https://apis.io/security/meitu/meitu-authentication/)
+- [Meitu Domain Security](https://apis.io/security/meitu/meitu-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://meitu.com)
+- [Documentation](https://ai.meitu.com/doc/?id=92&type=api)
+- [API reference](https://api.meitu.com/)
+- [GitHub](https://github.com/meitu)
+
+## API Evangelist rating
+
+**Kin Score 14.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 39.3 |
+| Access clarity | 0.0 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.9** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/meitu/](https://apis.io/providers/meitu/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Meitu: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/meitu/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
